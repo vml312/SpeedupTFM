@@ -1,0 +1,8 @@
+<map id="Selective_acceleration.selective_acc" name="Selective_acceleration.selective_acc">
+<area shape="rect" id="node1" title="Selectively accelerates the fragments with acceleration found in &#39;&#39;(\d+)else(\d." alt="" coords="5,42,267,69"/>
+<area shape="rect" id="node2" href="$namespaceSelective__acceleration.html#a7cf86b94731b9529b945c426d2a0319c" title="Determines the acceleration of the file in the directory that matches the name and renames the file f..." alt="" coords="345,5,539,47"/>
+<area shape="rect" id="node3" href="$namespaceSelective__acceleration.html#a9eb1b2bd34e72cf2ed871d6a949ba4b0" title="Accelerates the file with the speedup program." alt="" coords="315,71,569,98"/>
+<area shape="rect" id="node4" href="$namespacespeedup.html#ac55587387e8fe9480012f09bb47120c9" title="Main function with no arguments, because they are in the configuration speed file (configurationSpeed..." alt="" coords="617,71,732,98"/>
+<area shape="rect" id="node5" href="$namespacespeedup.html#a2d3b1f81bc54630081aebcd319c48e38" title="Function to extract the name of the file." alt="" coords="948,71,1067,98"/>
+<area shape="rect" id="node6" href="$namespacespeedup.html#a1be4fb6f0537b089e463743363417589" title="Function to accelerate the video." alt="" coords="780,97,900,123"/>
+</map>

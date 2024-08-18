@@ -1,0 +1,13 @@
+<map id="accelCalculator.voice_speed_list" name="accelCalculator.voice_speed_list">
+<area shape="rect" id="node1" title="Function that gets the list of voice accelerations." alt="" coords="5,77,165,119"/>
+<area shape="rect" id="node2" href="$namespacevoiceAccelerations.html#a0051a94392baac726ff498299350d335" title="Once the maximum and minimum target speeds have been confirmed, the target speeds for each subheading..." alt="" coords="219,12,390,53"/>
+<area shape="rect" id="node3" href="$namespaceaccelCalculator.html#a62b2583d6891ee699aab38b26f9530c9" title="Function that applies correction logic for target_speed of voice." alt="" coords="219,77,390,119"/>
+<area shape="rect" id="node4" href="$namespacevoiceAccelerations.html#a3207c91ea8a03d9b798a51327cc0f3f6" title="Main function." alt="" coords="213,143,396,170"/>
+<area shape="rect" id="node5" href="$namespacevoiceAccelerations.html#adc681ea30d9cfe09be2148807b4a8f45" title="The next step is to convert the graphemes into phonemes using the &#39;&#39;speak&#39;&#39; program,..." alt="" coords="445,5,641,47"/>
+<area shape="rect" id="node6" href="$namespacevoiceAccelerations.html#a640d2087dd4c8a7f2afdd92b4c51d41a" title="Calculation of parameters such as the average speed, the maximum and minimum speed,..." alt="" coords="449,71,638,112"/>
+<area shape="rect" id="node7" href="$namespacevoiceAccelerations.html#ae680628fda19deafe998f20dc27b88c7" title="This function first creates a table with columns for each subtitle such as start and end times,..." alt="" coords="444,136,643,177"/>
+<area shape="rect" id="node8" href="$namespacevoiceAccelerations.html#a0da617f9b7c93c7733d598427c4d5654" title="This process calls calculate_speed and calculate_speed_1s." alt="" coords="449,201,637,243"/>
+<area shape="rect" id="node11" href="$namespacevoiceAccelerations.html#ae3231592c7155189f53765bf475b90c6" title="Order of start and end times, umber of subtitles with negative time and minimum of subtitles with tex..." alt="" coords="460,267,627,308"/>
+<area shape="rect" id="node9" href="$namespacevoiceAccelerations.html#ad69f691e86082318a83a3eae8053213d" title="After having the number of phonemes per subtitle and their duration, the speed of each is calculated ..." alt="" coords="691,168,899,209"/>
+<area shape="rect" id="node10" href="$namespacevoiceAccelerations.html#a2ce9d2dcaf7566b636070bee83706f8c" title="To obtain the speed&#45;1s (grouping the subtitles) if they are separated by less than one second),..." alt="" coords="691,233,899,275"/>
+</map>

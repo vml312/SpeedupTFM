@@ -1,0 +1,5 @@
+<map id="speedup.main" name="speedup.main">
+<area shape="rect" id="node1" title="Main function with no arguments, because they are in the configuration speed file (configurationSpeed..." alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node2" href="$namespacespeedup.html#a2d3b1f81bc54630081aebcd319c48e38" title="Function to extract the name of the file." alt="" coords="336,5,455,32"/>
+<area shape="rect" id="node3" href="$namespacespeedup.html#a1be4fb6f0537b089e463743363417589" title="Function to accelerate the video." alt="" coords="168,31,288,57"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Movie_maker.main" name="Movie_maker.main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,42,152,69"/>
+<area shape="rect" id="node2" href="$namespaceMovie__maker.html#ac5929e9fda7b22847f70e31a3434b70b" title="Determines the total number of fragments to be generated." alt="" coords="211,5,391,47"/>
+<area shape="rect" id="node3" href="$namespaceMovie__maker.html#a695e89a9c8b87116963e639b115529d9" title="Creates the final video file." alt="" coords="200,71,403,98"/>
+</map>

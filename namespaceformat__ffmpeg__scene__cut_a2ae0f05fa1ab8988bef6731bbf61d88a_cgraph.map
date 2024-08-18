@@ -1,0 +1,5 @@
+<map id="format_ffmpeg_scene_cut.main" name="format_ffmpeg_scene_cut.main">
+<area shape="rect" id="node1" title="Main function of the script." alt="" coords="5,39,169,80"/>
+<area shape="rect" id="node2" href="$namespaceformat__ffmpeg__scene__cut.html#a47f4e92a1d1ad1adfd4a49f5f81368b6" title="Extracts the scene cuts from the ffmpeg output file." alt="" coords="217,5,416,47"/>
+<area shape="rect" id="node3" href="$namespaceformat__ffmpeg__scene__cut.html#ad2a75d42abcbae1ce943f9dede461e49" title="Extracts the duration of the input video in frames." alt="" coords="219,71,415,112"/>
+</map>

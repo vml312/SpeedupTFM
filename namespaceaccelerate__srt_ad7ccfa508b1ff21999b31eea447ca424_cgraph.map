@@ -1,0 +1,4 @@
+<map id="accelerate_srt.main" name="accelerate_srt.main">
+<area shape="rect" id="node1" title="Accelerates the original subtitle file." alt="" coords="5,13,156,39"/>
+<area shape="rect" id="node2" href="$namespaceaccelerate__srt.html#afe8d4fc8530f7e9cf6b189fb4c048fc3" title="Extracts the duration of the input video with ffmpeg." alt="" coords="204,5,351,47"/>
+</map>

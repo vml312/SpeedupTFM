@@ -1,0 +1,5 @@
+<map id="voiceAccelerations.speed_calculation" name="voiceAccelerations.speed_calculation">
+<area shape="rect" id="node1" title="This process calls calculate_speed and calculate_speed_1s." alt="" coords="5,39,193,80"/>
+<area shape="rect" id="node2" href="$namespacevoiceAccelerations.html#ad69f691e86082318a83a3eae8053213d" title="After having the number of phonemes per subtitle and their duration, the speed of each is calculated ..." alt="" coords="241,5,449,47"/>
+<area shape="rect" id="node3" href="$namespacevoiceAccelerations.html#a2ce9d2dcaf7566b636070bee83706f8c" title="To obtain the speed&#45;1s (grouping the subtitles) if they are separated by less than one second),..." alt="" coords="241,71,449,112"/>
+</map>

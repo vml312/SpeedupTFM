@@ -1,0 +1,5 @@
+<map id="motionAccelerations.calculate_opticalflow_parameters_df" name="motionAccelerations.calculate_opticalflow_parameters_df">
+<area shape="rect" id="node1" title="Calculate the optical flow parameters from all the else fragments: Every frame_skip% frames,..." alt="" coords="5,39,224,80"/>
+<area shape="rect" id="node2" href="$namespacemotionAccelerations.html#ad769eaa906205db9038e1d6af3c61224" title="Extracts the duration of the input video in frames." alt="" coords="279,5,469,47"/>
+<area shape="rect" id="node3" href="$namespacemotionAccelerations.html#adfc8c96b060a62449221a8911e495e43" title="Function that creates a dense optical flow field to calculate magnitudes from the video." alt="" coords="272,71,476,112"/>
+</map>

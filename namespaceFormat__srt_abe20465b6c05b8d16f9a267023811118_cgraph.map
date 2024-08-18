@@ -1,0 +1,7 @@
+<map id="Format_srt.main" name="Format_srt.main">
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,97,135,124"/>
+<area shape="rect" id="node2" href="$namespaceFormat__srt.html#a774c18f359471073e8db83d923839125" title="Compresses the subtitle file by merging together all consecutive voice subs." alt="" coords="183,5,365,32"/>
+<area shape="rect" id="node3" href="$namespaceFormat__srt.html#a8a53a4c7b04582ecb2cb3f098155cefc" title="Function that applies correction logic for n_segs_threshold." alt="" coords="203,57,345,98"/>
+<area shape="rect" id="node4" href="$namespaceFormat__srt.html#a2f06c6150b3af69a1cf0516713e2156e" title="Determines the total number of fragments to be generated." alt="" coords="193,122,355,163"/>
+<area shape="rect" id="node5" href="$namespaceFormat__srt.html#a825da16b5f97f831e46c6543075480be" title="Fills the new subtitle file with the speech and non&#45;speech subtitles." alt="" coords="206,188,342,215"/>
+</map>

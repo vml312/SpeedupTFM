@@ -1,0 +1,6 @@
+<map id="Selective_acceleration.speedup_file" name="Selective_acceleration.speedup_file">
+<area shape="rect" id="node1" title="Accelerates the file with the speedup program." alt="" coords="5,5,260,32"/>
+<area shape="rect" id="node2" href="$namespacespeedup.html#ac55587387e8fe9480012f09bb47120c9" title="Main function with no arguments, because they are in the configuration speed file (configurationSpeed..." alt="" coords="308,5,423,32"/>
+<area shape="rect" id="node3" href="$namespacespeedup.html#a2d3b1f81bc54630081aebcd319c48e38" title="Function to extract the name of the file." alt="" coords="639,5,757,32"/>
+<area shape="rect" id="node4" href="$namespacespeedup.html#a1be4fb6f0537b089e463743363417589" title="Function to accelerate the video." alt="" coords="471,31,591,57"/>
+</map>

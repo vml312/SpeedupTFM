@@ -1,0 +1,7 @@
+<map id="motionAccelerations.correct_acc_from_scene_cuts" name="motionAccelerations.correct_acc_from_scene_cuts">
+<area shape="rect" id="node1" title="Acceleration correction for plane changes: If the previous process (time_series_subsegments) returns ..." alt="" coords="5,39,211,80"/>
+<area shape="rect" id="node2" href="$namespacemotionAccelerations.html#a759b547288bc48e4b9e0deac49e71a95" title="This function calculates the average of all the accelerations that are part of a scene,..." alt="" coords="259,5,464,47"/>
+<area shape="rect" id="node3" href="$namespaceformat__ffmpeg__scene__cut.html#a2ae0f05fa1ab8988bef6731bbf61d88a" title="Main function of the script." alt="" coords="279,71,443,112"/>
+<area shape="rect" id="node4" href="$namespaceformat__ffmpeg__scene__cut.html#a47f4e92a1d1ad1adfd4a49f5f81368b6" title="Extracts the scene cuts from the ffmpeg output file." alt="" coords="512,37,711,79"/>
+<area shape="rect" id="node5" href="$namespaceformat__ffmpeg__scene__cut.html#ad2a75d42abcbae1ce943f9dede461e49" title="Extracts the duration of the input video in frames." alt="" coords="513,103,709,144"/>
+</map>

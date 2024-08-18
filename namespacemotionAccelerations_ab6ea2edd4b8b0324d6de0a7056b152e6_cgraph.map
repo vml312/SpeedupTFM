@@ -1,0 +1,15 @@
+<map id="motionAccelerations.main" name="motionAccelerations.main">
+<area shape="rect" id="node1" title="Main function of the script." alt="" coords="5,177,199,203"/>
+<area shape="rect" id="node2" href="$namespacemotionAccelerations.html#a864227c938ef0f9538b43c8a18ae9b73" title="This function creates a new srt file with the acceleration values of the non&#45;speech fragments." alt="" coords="247,169,424,211"/>
+<area shape="rect" id="node3" href="$namespacemotionAccelerations.html#a675c1f8b3342c92c0719990fe2bfa3de" title="Calculate the optical flow parameters from all the else fragments: Every frame_skip% frames,..." alt="" coords="472,71,691,112"/>
+<area shape="rect" id="node6" href="$namespacemotionAccelerations.html#af029295125ecfb06cf2895c5beba8613" title="Acceleration correction for plane changes: If the previous process (time_series_subsegments) returns ..." alt="" coords="479,136,684,177"/>
+<area shape="rect" id="node11" href="$namespacemotionAccelerations.html#ac1be79a9e91ad67a5f6952a786ecd378" title="This function corrects the acceleration values of the groups of frames that have the same inverse acc..." alt="" coords="479,201,684,243"/>
+<area shape="rect" id="node12" href="$namespacemotionAccelerations.html#af6ec15d407b4145d34f9c4ed3fc8d638" title="This function finds sub&#45;segments within the original video fragment, the procedure has been to calcul..." alt="" coords="486,267,677,308"/>
+<area shape="rect" id="node4" href="$namespacemotionAccelerations.html#ad769eaa906205db9038e1d6af3c61224" title="Extracts the duration of the input video in frames." alt="" coords="747,5,936,47"/>
+<area shape="rect" id="node5" href="$namespacemotionAccelerations.html#adfc8c96b060a62449221a8911e495e43" title="Function that creates a dense optical flow field to calculate magnitudes from the video." alt="" coords="739,71,943,112"/>
+<area shape="rect" id="node7" href="$namespacemotionAccelerations.html#a759b547288bc48e4b9e0deac49e71a95" title="This function calculates the average of all the accelerations that are part of a scene,..." alt="" coords="739,136,944,177"/>
+<area shape="rect" id="node8" href="$namespaceformat__ffmpeg__scene__cut.html#a2ae0f05fa1ab8988bef6731bbf61d88a" title="Main function of the script." alt="" coords="759,201,923,243"/>
+<area shape="rect" id="node9" href="$namespaceformat__ffmpeg__scene__cut.html#a47f4e92a1d1ad1adfd4a49f5f81368b6" title="Extracts the scene cuts from the ffmpeg output file." alt="" coords="992,169,1191,211"/>
+<area shape="rect" id="node10" href="$namespaceformat__ffmpeg__scene__cut.html#ad2a75d42abcbae1ce943f9dede461e49" title="Extracts the duration of the input video in frames." alt="" coords="993,235,1189,276"/>
+<area shape="rect" id="node13" href="$namespacemotionAccelerations.html#af3f3145e5bd6c373e9a0ef9815c930f3" title="Get the acceleration from the limits." alt="" coords="751,267,932,308"/>
+</map>
