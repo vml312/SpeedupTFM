@@ -1,0 +1,29 @@
+name: Web Page
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Current Repo Clone
+        uses: actions/checkout@v4
+      - name: Install  build-essential
+        run: sudo apt-get install -y -qq build-essential graphviz
+      - name: Install Doxygen
+        run: sudo apt-get install -y -qq doxygen
+      - name: Create Doxygen documentation
+        run: |
+          CUR=$PWD; 
+          for i in `find . -name Doxyfile -type f`; do P=`dirname $i`; mkdir -p gh-pages/$P; cd $P; doxygen;echo "Listing files in $P after Doxygen generation for $P:"; ls -R; sed -i -e 's.<tt>..g' html/navtreedata.js; sed -i -e 's.</tt>..g' html/navtreedata.js; cp -r html $CUR/gh-pages/$P/doxygen; cd $CUR; done
+      - name: Create index files
+        run: |
+          cd gh-pages; 
+          CUR=$PWD; 
+          for f in `find . -type d`; do cd $CUR; cd $f; if test -f index.html; then echo "index.html exists in $f"; else for i in `ls`; do echo "<a href=\"$i/index.html\">$i</a></br>" >> index.html; done; fi; cd $CUR; done
+      - name: Deploy to GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: gh-pages
+          FOLDER: gh-pages/WebPage/doxygen
