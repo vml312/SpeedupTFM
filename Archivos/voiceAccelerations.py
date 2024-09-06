@@ -56,7 +56,7 @@ def process_srt_graphemes_df(srt_name, n_decimals, output_path):
         
         df.loc[index, 'time-diff'] = round(df.loc[index, 'end-time-s'] - df.loc[index, 'start-time-s'], n_decimals)
                     
-        #translate eliminates every punctuation
+        # Elimination of html tags ({} and <>)
         line_html1 = re.sub(pattern_html1, ' ', sub.text)
         line_html2 = re.sub(pattern_html2, ' ', line_html1)
         
@@ -64,17 +64,17 @@ def process_srt_graphemes_df(srt_name, n_decimals, output_path):
         lines_split = line_html2.split('\n')
         
         lines_join = ' '.join(line.strip() for line in lines_split)
-        line_initial = re.sub(pattern_first_notsymbol, '', lines_join).replace(r'\N', ' ').translate(translator) #\N in some cases
+        line_initial = re.sub(pattern_first_notsymbol, '', lines_join).replace(r'\N', ' ').translate(translator) # \N in some cases
         
         df.loc[index, 'subtitles-graphemes'] = line_initial
 
 
-    ##Delete subtitle lines (grapheme) which are empty (speed impossible to calculate)
+    # Delete subtitle lines (grapheme) which are empty (speed impossible to calculate)
     df_empty = df['subtitles-graphemes'].map(lambda x: x if x.strip() else '\t')
     df.drop(df[df_empty == '\t'].index, inplace=True)
     df.reset_index(drop=True,inplace=True)
 
-    # create a custom index starting from 1
+    # Create a custom index starting from 1
     index_arranged = pd.Index(range(1, len(df)+1))
     df.index = index_arranged
         
@@ -84,7 +84,7 @@ def process_srt_graphemes_df(srt_name, n_decimals, output_path):
         # Iterate over each line in the file
         for i in df.index:
             file.write((df.loc[i, 'subtitles-graphemes'].strip()).translate(translator))
-            # Write three empty lines, to read each line separately
+            # Write three empty lines, to read each line separately in the espeak program
             file.write("\n" * 3)
     
     return df
@@ -177,6 +177,7 @@ def speed_calculation(df, n_segs_umbral, n_decimals):
 
 ##
 # @brief Calculation of parameters such as the average speed, the maximum and minimum speed, the score of the file and whether it has errors so they are calculated in this process.
+# This score represents the quality of the subtitle file, which is calculated by subtracting errors such as bad formatting.
 # @param df   The dataframe with the subtitles and other parameters.
 # @param min_speed   The minimum speed.
 # @param max_speed   The maximum speed.
@@ -184,7 +185,6 @@ def speed_calculation(df, n_segs_umbral, n_decimals):
 # @return  The dataframe with the subtitles.
 ##
 def global_parameters(df, min_speed, max_speed, n_decimals):
-    #Number that scores the quality of the subtitle file (number of speed min and max surpassed) 
     index_min_speed = 0
     index_max_speed = 0
 
@@ -253,9 +253,9 @@ def acc_calculate_csv_format(file_name, df, target_speed_min, target_speed_max, 
 # @param n_subtitles_min   The minimum number of subtitles not empty.
 # @param file_name   The name of the subtitle file.
 # @param output_path   The path where the files are stored.
+# @param language_prefix   The language of the subtitles.
 ##
-def srt_errors(df, n_subtitles_min, file_name, output_path):
-# Overlaps, Spanish language
+def srt_errors(df, n_subtitles_min, file_name, output_path, language_prefix):
     n_errors = 0    
     df_sorted = df.copy()
     
@@ -292,10 +292,10 @@ def srt_errors(df, n_subtitles_min, file_name, output_path):
         
     if len(df) > 1:
         text = open(output_path + "/graphemes_" + file_name + ".txt", 'r', encoding= 'UTF-8').read()
-        if langdetect.detect(text) != 'es':
+        if langdetect.detect(text) != language_prefix:
             results = langdetect.detect_langs(text)
-            print(f"Error in {file_name}.srt, it's not in spanish. Results are {results}")
-            with open(error_file, "a") as file: file.write(f"Error in {file_name}.srt, it's not in spanish. Results are {results}\n")
+            print(f"Error in {file_name}.srt, it's not in '{language_prefix}'. Results are {results}")
+            with open(error_file, "a") as file: file.write(f"Error in {file_name}.srt, it's not in '{language_prefix}'. Results are {results}\n")
             n_errors += 1
         
     df.loc[1, 'n_errors'] = n_errors
@@ -317,6 +317,6 @@ def main(file_name, language_prefix, n_decimals, n_segs_umbral, min_speed, max_s
     df = process_srt_graphemes_df(file_name, n_decimals, output_path)
     df = espeak_phonemes_df(file_name, df, language_prefix, output_path)
     df = speed_calculation(df, n_segs_umbral, n_decimals)
-    srt_errors(df, n_subtitles_min, file_name, output_path)
+    srt_errors(df, n_subtitles_min, file_name, output_path, language_prefix)
     df = global_parameters(df, min_speed, max_speed, n_decimals)
     return df

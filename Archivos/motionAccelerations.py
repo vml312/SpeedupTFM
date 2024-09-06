@@ -55,49 +55,43 @@ def mp4_duration_frames(filename):
 ##
 def optical_flow_dense_from_video(video_name, frame_skip):
     cap = cv2.VideoCapture(video_name)
-    # Get the first frame
+    # Get the first frame and convert it to grayscale
     ret, frame1 = cap.read()
-    # Convert the frame to grayscale
     prvs = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
     
     mag_list = []
     frame_count = 0
     while True:
-        # Read the next frame
         ret, frame2 = cap.read()
         if not ret:
             break
-        frame_count += 1 
 
+        frame_count += 1 
         if frame_skip:
             if frame_count % frame_skip != 0:
                 continue
-        # Convert the frame to grayscale
+            
         next_frame = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
         # Calculates dense optical flow by Farneback method
         flow = cv2.calcOpticalFlowFarneback(prvs, next_frame, None, 0.5, 3, 15, 3, 5, 1.2, 0)
-        # Computes the magnitude and angle of the 2D vectors
         magnitude, angle = cv2.cartToPolar(flow[..., 0], flow[..., 1])
         # Define the window size for the moving average
         window_size = 15
-        step_size = 5  # Step size for moving window
-        mean_mags = []  # To store the calculated mean magnitudes
+        step_size = 5
+        mean_mags = [] 
         # Apply the moving average
         for i in range(0, magnitude.shape[0] - window_size, step_size):
-            # Define the moving window
             window = magnitude[i : i + window_size]
-            # Calculate the mean of the window
             mean_mag = np.mean(window)
-            mean_mags.append(mean_mag)  # Store the mean magnitude
+            mean_mags.append(mean_mag)
         # Analyze the mean magnitudes to identify high-motion regions
         if len(mean_mags)>0:
-            high_motion_threshold = np.percentile(mean_mags, 90)  # Example threshold
+            high_motion_threshold = np.percentile(mean_mags, 90) # Threshold for high motion
             high_motion_windows = [mag for mag in mean_mags if mag > high_motion_threshold]
             mean95 = np.mean(high_motion_windows)
             mag_list.append(mean95)
 
         prvs = next_frame
-    # Release the video capture and close all windows
     cap.release()
     cv2.destroyAllWindows()
 
