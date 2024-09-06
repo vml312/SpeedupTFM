@@ -1068,7 +1068,7 @@
       <Scope>voiceAccelerations</Scope>
     </TokenIdentifier>
     <Path>namespacevoiceAccelerations.html</Path>
-    <Anchor>ae3231592c7155189f53765bf475b90c6</Anchor>
+    <Anchor>ad1f4891c6f07410dfac6e0d614ce6ed5</Anchor>
     <Abstract>Order of start and end times, umber of subtitles with negative time and minimum of subtitles with tex...</Abstract>
     <DeclaredIn>voiceAccelerations.py</DeclaredIn>
   </Token>

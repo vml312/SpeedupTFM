@@ -112,9 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0051a94392baac726ff498299350d335"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevoiceAccelerations.html#a0051a94392baac726ff498299350d335">acc_calculate_csv_format</a> (file_name, df, target_speed_min, target_speed_max, n_decimals, output_path)</td></tr>
 <tr class="memdesc:a0051a94392baac726ff498299350d335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Once the maximum and minimum target speeds have been confirmed, the target speeds for each subheading are calculated, so that the acceleration of each subheading can be calculated by by dividing the target speed by the speed-1s.  <a href="namespacevoiceAccelerations.html#a0051a94392baac726ff498299350d335">More...</a><br /></td></tr>
 <tr class="separator:a0051a94392baac726ff498299350d335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3231592c7155189f53765bf475b90c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevoiceAccelerations.html#ae3231592c7155189f53765bf475b90c6">srt_errors</a> (df, n_subtitles_min, file_name, output_path)</td></tr>
-<tr class="memdesc:ae3231592c7155189f53765bf475b90c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order of start and end times, umber of subtitles with negative time and minimum of subtitles with text are checked, time overlaps and ensure its Spanish language.  <a href="namespacevoiceAccelerations.html#ae3231592c7155189f53765bf475b90c6">More...</a><br /></td></tr>
-<tr class="separator:ae3231592c7155189f53765bf475b90c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f4891c6f07410dfac6e0d614ce6ed5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevoiceAccelerations.html#ad1f4891c6f07410dfac6e0d614ce6ed5">srt_errors</a> (df, n_subtitles_min, file_name, output_path, language_prefix)</td></tr>
+<tr class="memdesc:ad1f4891c6f07410dfac6e0d614ce6ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order of start and end times, umber of subtitles with negative time and minimum of subtitles with text are checked, time overlaps and ensure its Spanish language.  <a href="namespacevoiceAccelerations.html#ad1f4891c6f07410dfac6e0d614ce6ed5">More...</a><br /></td></tr>
+<tr class="separator:ad1f4891c6f07410dfac6e0d614ce6ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3207c91ea8a03d9b798a51327cc0f3f6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevoiceAccelerations.html#a3207c91ea8a03d9b798a51327cc0f3f6">main</a> (file_name, language_prefix, n_decimals, n_segs_umbral, min_speed, max_speed, n_subtitles_min, output_path)</td></tr>
 <tr class="memdesc:a3207c91ea8a03d9b798a51327cc0f3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function.  <a href="namespacevoiceAccelerations.html#a3207c91ea8a03d9b798a51327cc0f3f6">More...</a><br /></td></tr>
 <tr class="separator:a3207c91ea8a03d9b798a51327cc0f3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -370,7 +370,7 @@ In this file, the subtitle file is converted into a dataframe with multiple colu
 </div><div class="memdoc">
 
 <p>Calculation of parameters such as the average speed, the maximum and minimum speed, the score of the file and whether it has errors so they are calculated in this process. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>This score represents the quality of the subtitle file, which is calculated by subtracting errors such as bad formatting. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">df</td><td>The dataframe with the subtitles and other parameters. </td></tr>
     <tr><td class="paramname">min_speed</td><td>The minimum speed. </td></tr>
@@ -381,7 +381,7 @@ In this file, the subtitle file is converted into a dataframe with multiple colu
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The dataframe with the subtitles. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="voiceAccelerations_8py_source.html#l00186">186</a> of file <a class="el" href="voiceAccelerations_8py_source.html">voiceAccelerations.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="voiceAccelerations_8py_source.html#l00187">187</a> of file <a class="el" href="voiceAccelerations_8py_source.html">voiceAccelerations.py</a>.</p>
 
 </div>
 </div>
@@ -473,7 +473,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacevoiceAccelerations.html#a640d2087dd4c8a7f2afdd92b4c51d41a" title="Calculation of parameters such as the average speed, the maximum and minimum speed,..." alt="" coords="241,71,430,112"/>
 <area shape="rect" href="namespacevoiceAccelerations.html#ae680628fda19deafe998f20dc27b88c7" title="This function first creates a table with columns for each subtitle such as start and end times,..." alt="" coords="236,136,435,177"/>
 <area shape="rect" href="namespacevoiceAccelerations.html#a0da617f9b7c93c7733d598427c4d5654" title="This process calls calculate_speed and calculate_speed_1s." alt="" coords="241,201,429,243"/>
-<area shape="rect" href="namespacevoiceAccelerations.html#ae3231592c7155189f53765bf475b90c6" title="Order of start and end times, umber of subtitles with negative time and minimum of subtitles with tex..." alt="" coords="252,267,419,308"/>
+<area shape="rect" href="namespacevoiceAccelerations.html#ad1f4891c6f07410dfac6e0d614ce6ed5" title="Order of start and end times, umber of subtitles with negative time and minimum of subtitles with tex..." alt="" coords="252,267,419,308"/>
 <area shape="rect" href="namespacevoiceAccelerations.html#ad69f691e86082318a83a3eae8053213d" title="After having the number of phonemes per subtitle and their duration, the speed of each is calculated ..." alt="" coords="483,169,691,211"/>
 <area shape="rect" href="namespacevoiceAccelerations.html#a2ce9d2dcaf7566b636070bee83706f8c" title="To obtain the speed&#45;1s (grouping the subtitles) if they are separated by less than one second),..." alt="" coords="483,235,691,276"/>
 </map>
@@ -577,8 +577,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae3231592c7155189f53765bf475b90c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3231592c7155189f53765bf475b90c6">&#9670;&nbsp;</a></span>srt_errors()</h2>
+<a id="ad1f4891c6f07410dfac6e0d614ce6ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f4891c6f07410dfac6e0d614ce6ed5">&#9670;&nbsp;</a></span>srt_errors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,7 +605,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>output_path</em>&#160;</td>
+          <td class="paramname"><em>output_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>language_prefix</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -622,11 +628,12 @@ Here is the call graph for this function:</div>
     <tr><td class="paramname">n_subtitles_min</td><td>The minimum number of subtitles not empty. </td></tr>
     <tr><td class="paramname">file_name</td><td>The name of the subtitle file. </td></tr>
     <tr><td class="paramname">output_path</td><td>The path where the files are stored. </td></tr>
+    <tr><td class="paramname">language_prefix</td><td>The language of the subtitles. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="voiceAccelerations_8py_source.html#l00257">257</a> of file <a class="el" href="voiceAccelerations_8py_source.html">voiceAccelerations.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="voiceAccelerations_8py_source.html#l00258">258</a> of file <a class="el" href="voiceAccelerations_8py_source.html">voiceAccelerations.py</a>.</p>
 
 </div>
 </div>
