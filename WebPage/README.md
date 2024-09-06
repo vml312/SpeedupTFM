@@ -21,4 +21,5 @@ This project contains the following Python files, with `main.py` as the entry po
 - VoiceElseDuration.py
 
 Please refer to these files for code implementation by clicking in the names of the files or in **[Files](files.html)** section.
+
 For detailed descriptions, dependency graphs, and additional documentation, see the **[Packages](namespaces.html)** section.
