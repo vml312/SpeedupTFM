@@ -268,9 +268,19 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Acceleration correction for plane changes: If the previous process (time_series_subsegments) returns an error signal for having fewer frames than necessary to process the stream, the minimum acceleration is assigned to this video fragment. </p>
-<p>If it does not, the procedure continues and enters a function (correct_acc_min_video_duration) to correct the acceleration according to the existing plane changes. </p>
+<p>If it does not, the procedure continues and enters a function (correct_acc_min_video_duration) to correct the acceleration according to the existing plane changes. First, the program <a class="el" href="namespaceformat__ffmpeg__scene__cut.html">format_ffmpeg_scene_cut</a> is run to obtain the changes of scene of the video and each scene is assigned its number in the ''interval'' column. The acceleration of each processed frame is then adjusted so that the duration of the accelerated scenes is greater than the parameter entered in the configuration file (''min_acc_scene_duration'') Since the correction has potentially varied the acceleration value of all the frames in them, the average of all the accelerations that are part of a scene is taken (correct_acc_min_video_duration) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path where the video files are stored </td></tr>
+    <tr><td class="paramname">filename</td><td>The name of the video file </td></tr>
+    <tr><td class="paramname">scene_cut_threshold</td><td>The threshold to detect scene cuts </td></tr>
+    <tr><td class="paramname">df</td><td>The dataframe with the optical flow values </td></tr>
+    <tr><td class="paramname">min_acc_scene_duration</td><td>The minimum accelerated scene duration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The dataframe with the corrected accelerations </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00260">260</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00259">259</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -340,7 +350,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The dataframe with the corrected accelerations </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00298">298</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00297">297</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
 
 </div>
 </div>
@@ -487,7 +497,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00411">411</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00410">410</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -673,7 +683,7 @@ The frames per second of the video. </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00330">330</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motionAccelerations_8py_source.html#l00329">329</a> of file <a class="el" href="motionAccelerations_8py_source.html">motionAccelerations.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
