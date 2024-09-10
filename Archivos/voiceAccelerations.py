@@ -15,9 +15,7 @@ import langdetect
 ##
 # @brief This function first creates a table with columns for each subtitle such as start and end times, graphemes and phonemes, speed and speed-1s.
 # There are also cells with the mean, maximum and minimum of the speed-1s column.
-
 # The next step is to load the subtitle file and create a text file with the graphemes of each subtitle, separated by three line breaks by the next block, and write it also in the df.
-
 # The following modifications have to be made to the original graphemes: remove any html markings such as ''<>'' or ''{}'', replace line breaks with spaces, ensure that the first 
 # character is a letter and delete any symbols that may appear, as well as escape characters.
 # @param srt_name   The name of the subtitle file.
@@ -26,10 +24,7 @@ import langdetect
 # @return  The dataframe with the subtitles.
 ##
 def process_srt_graphemes_df(srt_name, n_decimals, output_path):
-    # Create a Series with column names
     columns = pd.Series(['index','start-time', 'end-time', 'subtitles-graphemes', 'subtitles-phonemes', 'speed','mean-speed', 'speed-1s', 'mean-speed-1s', 'max-speed', 'min-speed', 'start-time-s', 'end-time-s'])
-
-    # Create an empty DataFrame and set its columns using the Series
     df = pd.DataFrame(columns=columns)
     df.set_index('index', inplace = True)
     index = 0

@@ -246,7 +246,6 @@ def correct_acc_min_video_duration(df):
 # @brief Acceleration correction for plane changes: If the previous process (time_series_subsegments) returns an error signal for having fewer frames than necessary to process the 
 # stream, the minimum acceleration is assigned to this video fragment. If it does not, the procedure continues and enters a function (correct_acc_min_video_duration) to correct the 
 # acceleration according to the existing plane changes.
-
 # First, the program format_ffmpeg_scene_cut is run to obtain the changes of scene of the video and each scene is assigned its number in the ''interval'' column. The acceleration
 # of each processed frame is then adjusted so that the duration of the accelerated scenes is greater than the parameter entered in the configuration file (''min_acc_scene_duration'')
 # Since the correction has potentially varied the acceleration value of all the frames in them, the average of all the accelerations that are part of a scene is taken (correct_acc_min_video_duration)
@@ -415,8 +414,6 @@ def main(path, srt_file, frame_skip, acc_max, acc_min, min_acc_scene_duration, m
     
     for n_file in files:
         if n_file[-4:]==".mp4":
-            # if n_file[-9:-4]=="voice" or n_file[0:3]=="dep": # To ensure there are no previous files from other processing
-            #     os.remove(path + '/' + n_file)
             if n_file[-8:-4]=="else": # To select only else fragments
                 videos.append(n_file)
                 
